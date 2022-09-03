@@ -144,3 +144,26 @@ We can use this formula to compute the probability of likelihoods if our data is
 -   **[Multinomial](http://scikit-learn.org/stable/modules/naive_bayes.html):** It is used for discrete counts. For example, let’s say, we have a text classification problem. Here we can consider Bernoulli trials which is one step further and instead of “word occurring in the document”, we have “count how often word occurs in the document”, you can think of it as “number of times outcome number x_i is observed over the n trials”.
     
 -   **[Bernoulli](http://scikit-learn.org/stable/modules/naive_bayes.html):** The binomial model is useful if your feature vectors are binary (i.e. zeros and ones). One application would be text classification with ‘bag of words’ model where the 1s & 0s are “word occurs in the document” and “word does not occur in the document” respectively.
+
+
+## **Count Vector**
+
+Machines cannot understand characters and words. So when dealing with text data we need to represent it in numbers to be understood by the machine. Countvectorizer is a method to convert text to numerical data. To show you how it works let’s take an example:
+
+***text = [‘Hello my name is james, this is my python notebook’]***
+
+The text is transformed to a sparse matrix as shown below.
+
+![](https://miro.medium.com/max/703/1*v_jgSbul8mjfQeBfBIpGLQ.png)
+
+We have 8 unique words in the text and hence 8 different columns each representing a unique word in the matrix. The row represents the word count. Since the words ‘is’ and ‘my’ were repeated twice we have the count for those particular words as 2 and 1 for the rest.
+
+Countvectorizer makes it easy for text data to be used directly in machine learning and deep learning models such as text classification.
+
+Let’s take another example, but this time with more than 1 input:
+
+***text = [‘Hello my name is james' , ’this is my python notebook’]***
+
+Here we have 2 text inputs, what happens is that each input is preprocessed, tokenized, and represented as a sparse matrix. By default, Countvectorizer converts the text to lowercase and uses word-level tokenization.
+
+![](https://miro.medium.com/max/758/1*64-SAdEtdZW2Et8HZzqJYA.png)
