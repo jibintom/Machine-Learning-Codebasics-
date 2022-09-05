@@ -45,12 +45,26 @@ Now we will define the type of model we want to build an SVC regression model in
     
 
 **Output:**
+
+
+
+
+
+
 ![enter image description here](https://raw.githubusercontent.com/jibintom/Machine-Learning-Codebasics-/main/a15.%20Hyper%20parameter%20Tuning%20%28GridSearchCV%29/Images/RESULTS.png)
+
+
+
+
+
+
 We can check the best parameter by using the best_params_ function that is shown above.
 
     clf.best_score_
     
     clf.best_params_
+
+
 
 **Output:**
 
